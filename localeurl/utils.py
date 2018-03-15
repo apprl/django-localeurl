@@ -38,6 +38,7 @@ def supported_language(locale):
     """
     Returns the supported language (from settings.LANGUAGES) for the locale.
     """
+    locale = locale or 'en'
     locale = locale.lower()
     bits = locale.split('-')
     if locale in localeurl_settings.SUPPORTED_LOCALES:
